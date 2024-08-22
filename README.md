@@ -1,20 +1,29 @@
-# Template CRUD & Auth Adonis 6
+## Requirement 
+- Node.js >= 20.0.0
 
-## Tutorial
-1. please give github a star
-2. clone this
-3. setting .env
-4. npm instal
-5. node ace make:migration run
-6. node ace serve --watch 
-
-# Explain
-
-|Ket| Method | URL | Auth | Field |
-|---|---|---|---|---|
-| Login | POST | /api/register | - | full_name, email, password |
-| Register | POST | /api/login | - | email, password |
-| Create | POST | /api/posts | Bearer | title, content, user_id |
-| Update | PUT | /api/posts/{idPost}| Bearer | title, content, user_id |
-| Detail | GET | /api/posts/{idPost}| Bearer | - |
-| Delete | DELETE | /api/posts/{idPost}| Bearer | - |
+## Installation
+1. Clone the repository
+```bash
+git clone https://github.com/HansAndi/belajar-adonis-v6.git
+```
+2. NPM Install
+```bash
+npm install
+```
+4. Copy .env.example to .env
+```bash
+cp .env.example .env
+```
+5. Setting .env
+6. Generate key
+```bash
+node ace generate:key
+```
+7. Migrate & seeding database
+```bash
+node ace migration:run --seed
+```
+8. Run NPM
+```bash
+npm run dev || node ace serve --watch
+```
